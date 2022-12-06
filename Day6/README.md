@@ -1,4 +1,4 @@
-# Day 6: Tuning Trouble 
+# Day 6: Tuning Trouble
 
 The preparations are finally complete; you and the Elves leave camp on foot and begin to make your way toward the star fruit grove.
 
@@ -24,7 +24,10 @@ The first time a marker appears is after the seventh character arrives. Once it 
 
 Here are a few more examples:
 
-`bvwbjplbgvbhsrlpgdmjqwftvncz`: first marker after character `5` `nppdvjthqldpwncqszvftbrmjlhg`: first marker after character `6` `nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg`: first marker after character `10` `zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw`: first marker after character `11`
+`bvwbjplbgvbhsrlpgdmjqwftvncz`: first marker after character `5`
+`nppdvjthqldpwncqszvftbrmjlhg`: first marker after character `6` 
+`nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg`: first marker after character `10` 
+`zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw`: first marker after character `11`
 
 How many characters need to be processed before the first start-of-packet marker is detected?
 
@@ -38,7 +41,11 @@ A start-of-message marker is just like a start-of-packet marker, except it consi
 
 Here are the first positions of start-of-message markers for all of the above examples:
 
-`mjqjpqmgbljsphdztnvjfqwrcgsmlb`: first marker after character `19` `bvwbjplbgvbhsrlpgdmjqwftvncz`: first marker after character `23` `nppdvjthqldpwncqszvftbrmjlhg`: first marker after character `23` `nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg`: first marker after character `29` `zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw`: first marker after character `26`
+`mjqjpqmgbljsphdztnvjfqwrcgsmlb`: first marker after character `19`
+`bvwbjplbgvbhsrlpgdmjqwftvncz`: first marker after character `23`
+`nppdvjthqldpwncqszvftbrmjlhg`: first marker after character `23`
+`nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg`: first marker after character `29`
+`zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw`: first marker after character `26`
 
 How many characters need to be processed before the first start-of-message marker is detected?
 
