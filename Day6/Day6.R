@@ -1,9 +1,8 @@
-input <- readLines("Day6/input.txt") |> quanteda::tokenize_character() |> 
-    unlist() |> paste0(collapse = " ") |> quanteda::tokens()
+input <- read_file_raw("Day6/input.txt") |> rawToChar(multiple = T) 
 
-ngram = 14
-packet <- char_ngrams(input[[1]], n = ngram, concatenator = " ") |> 
-    strsplit( " ") |> 
-    lapply(\(x) all(!duplicated(x))) |> unlist() 
+ngram = 4 # change for part 2
 
-min(which(packet)) + ngram - 1
+packet = quanteda::char_ngrams(input, n = ngram, concatenator = "") |> 
+    lapply(\(x) length(unique(charToRaw(x))) == ngram) |> unlist()
+
+which(packet)[[1]] + ngram - 1
