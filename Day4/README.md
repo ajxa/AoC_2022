@@ -1,4 +1,4 @@
-# Day 4: Camp Cleanup 
+# Day 4: Camp Cleanup
 
 Space needs to be cleared before the last supplies can be unloaded from the ships, and so several Elves have been assigned the job of cleaning up sections of the camp. Every section has a unique ID number, and each Elf is assigned a range of section IDs.
 
@@ -28,9 +28,6 @@ For the first few pairs, this list means:
 
     This example list uses single-digit section IDs to make it easier to draw; your actual list might contain larger numbers. Visually, these pairs of section assignments look like this:
 
-```{=html}
-<!-- -->
-```
     .234…..     2-4 
     …..678.     6-8
 
@@ -55,7 +52,7 @@ In how many assignment pairs does one range fully contain the other?
 
 Your puzzle answer was `448`.
 
-# Part Two 
+# Part Two
 
 It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would like to know the number of pairs that overlap at all.
 
