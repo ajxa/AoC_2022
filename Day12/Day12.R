@@ -40,22 +40,16 @@ destination_squares <- function(step){
     possible_moves <- possible_moves[possible_move_letters <= (step_letter + 1),, drop=FALSE]
     
     if(nrow(possible_moves)){
-        
         return(
-            data.frame(
-                "from" = squares[step["x"], step["y"]],
-                "to"  =apply(possible_moves, 1,\(x) squares[x["x"],x["y"]])
-                )
-        )
-        
+            data.frame("from" = squares[step["x"], step["y"]],
+                       "to"= apply(possible_moves, 1,\(x) squares[x["x"],x["y"]]))
+            )
     } else return(NULL)
-    
 }
 
 network_edges <- lapply(all_coords, destination_squares) %>% do.call(rbind, .)
 
 graph <- as.matrix(network_edges) %>% igraph::graph_from_edgelist(directed = TRUE)
-
 
 start_vertex <- sapply(all_coords,\(x) all(x == start)) %>% which()
 end_vertex <- sapply(all_coords,\(x) all(x == end)) %>% which()
@@ -65,7 +59,6 @@ igraph::distances(graph = graph,
                   to = end_vertex,
                   mode = "out")
 # Part 2 ----
-
 all_coords <- do.call(rbind, all_coords)
 
 a_positions <- which(map == "a", arr.ind = T)
@@ -76,5 +69,5 @@ a_vertices  <- apply(a_positions, 1, \(x){
     
 })
 
-distances(graph = graph, v = a_vertices, to = end_vertex, mode="out") %>%
+igraph::distances(graph = graph, v = a_vertices, to = end_vertex, mode="out") %>%
     min()
